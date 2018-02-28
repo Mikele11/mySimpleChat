@@ -1,0 +1,128 @@
+{
+	"id": "6409c068-48b7-b877-6b4a-9d4e85ff4888",
+	"name": "Mycollec",
+	"description": "",
+	"order": [
+		"7582819e-69d9-e3b4-c9c7-9ce32dfd4a30",
+		"49318e95-8926-15b7-2313-176c303c538c",
+		"9f32003a-722b-18b4-bd21-66112988ef48"
+	],
+	"folders": [],
+	"folders_order": [],
+	"timestamp": 1519751700673,
+	"owner": "294160",
+	"public": false,
+	"requests": [
+		{
+			"id": "49318e95-8926-15b7-2313-176c303c538c",
+			"headers": "Content-Type: application/x-www-form-urlencoded\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/x-www-form-urlencoded",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "",
+					"value": "",
+					"description": "",
+					"enabled": false
+				}
+			],
+			"url": "http://localhost:3000/chat",
+			"queryParams": [],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"preRequestScript": null,
+			"method": "POST",
+			"collectionId": "6409c068-48b7-b877-6b4a-9d4e85ff4888",
+			"data": [],
+			"dataMode": "raw",
+			"name": "http://localhost:3000/chat",
+			"description": "Post - додати елемент до коллекції(повідомлення)",
+			"descriptionFormat": "html",
+			"time": 1519752369517,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"rawModeData": "{\n        \"name\": \"Віка\",\n        \"mesage\": \"Не виновна сідайте\",\n    }"
+		},
+		{
+			"id": "7582819e-69d9-e3b4-c9c7-9ce32dfd4a30",
+			"headers": "Content-Type: application/x-www-form-urlencoded\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/x-www-form-urlencoded",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "",
+					"value": "",
+					"description": "",
+					"enabled": false
+				}
+			],
+			"url": "http://localhost:3000/chat",
+			"queryParams": [],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"preRequestScript": null,
+			"method": "GET",
+			"collectionId": "6409c068-48b7-b877-6b4a-9d4e85ff4888",
+			"data": [],
+			"dataMode": "raw",
+			"name": "http://localhost:3000/chat",
+			"description": "GET - получил все сообщения(всю коллекцию)",
+			"descriptionFormat": "html",
+			"time": 1519751782004,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"rawModeData": "{\n        \"_id\": \"5a946014b6bd605b24f3f011\",\n        \"name\": \"Михайло\",\n        \"mesage\": \"Что это вообще такое Где єто видано\",\n        \"registr\": \"26.02.2018\"\n    }"
+		},
+		{
+			"id": "9f32003a-722b-18b4-bd21-66112988ef48",
+			"headers": "Content-Type: application/x-www-form-urlencoded\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/x-www-form-urlencoded",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "",
+					"value": "",
+					"description": "",
+					"enabled": false
+				}
+			],
+			"url": "http://localhost:3000/chat/5a95935520b8ea5070f2594f",
+			"queryParams": [],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"preRequestScript": null,
+			"method": "DELETE",
+			"collectionId": "6409c068-48b7-b877-6b4a-9d4e85ff4888",
+			"data": [],
+			"dataMode": "raw",
+			"name": "http://localhost:3000/chat",
+			"description": "DELETE - удалив по id повідомлення(1 з коллекції)",
+			"descriptionFormat": "html",
+			"time": 1519752491993,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"rawModeData": ""
+		}
+	]
+}

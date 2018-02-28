@@ -1,0 +1,89 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "title": "chat Swagger-based API",
+        "description": "chat Swagger-based API (WebSphere Liberty apiDiscovery example)",
+        "termsOfService": "",
+        "contact":{
+            "name": "Michael",
+            "email": "",
+            "url": "http://localhost:3000"
+        },
+        "license": {
+            "name": "",
+            "url": ""
+        },
+        "version": "1.0.0"
+    },
+    "tags": [
+        {
+            "name": "chat Swagger-based API",
+            "description": "WebSphere Liberty apiDiscovery example"
+        }
+    ],   
+    "paths": {
+        "/chat/{isbn}": {
+            "post": {
+                "tags": ["chat Swagger-based API"],
+                "summary": "Store a messege definition into chat",
+                "description": "Stores a messege definition into chat and returns a valid JSON representation of the document",
+                "produces": ["application/json", "text/plain"],                                   	   
+     	        "responses": {
+                    "200": {"description": "messege is successfully added",
+                            "schema": {
+                                "$ref": "#/definitions/messegeBody.isbn"
+                            }
+                    },
+                    "500": {"description": "Internal server error"}
+                },                                  	
+                "parameters": [
+                    {
+                        "name": "isbn",
+                        "in": "path",
+                        "type": "string",
+                        "required": true,
+                        "description": "A messege isbn"                                   
+                    },
+                    {
+                        "name": "messegeBody",
+                        "in": "body",
+                        "schema": {
+                            "$ref": "#/definitions/messegeBody"
+                        },
+                        "description": "A messege definition"
+                    },
+                    {
+                        "name": "Accept",
+                        "in": "header",
+                        "description": "Format of the returned document",
+                        "required": false,
+                        "default": "application/json",
+                        "type": "string",
+                        "enum": ["application/json", "text/plain"]
+                    }
+                ]
+            }
+        }
+	},
+	"definitions": {
+        "messegeBody": {
+            "type": "object",
+            "description": "The properties of a messege",
+            "properties": {
+                "isbn": "string",
+                "name": {
+                    "type": "string",
+                    "example": "Маша"
+                },
+                "mesage": {
+                    "type": "string",
+                    "example": "Я иду сегодня в кино"                 
+                },
+				"registr": {
+                    "type": "string",
+                    "example": "27.02.2018"                 
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,45 @@
+html{
+	width: 100%;
+	height: 100vh;
+}
+body{
+	width: 100%;
+	height: 100vh;
+}
+table{
+	width: 100%;
+	height: 100vh;
+}
+td{
+	width: 30%;
+}
+textarea {
+    width: 100%; 
+    height: 100%; 
+    resize: none; 
+}
+.sharWidth {
+	width:100%;
+}
+.ng-binding {
+	background: rgb(230, 255, 255);
+	border-radius: 14px; 
+}
+
+.header {
+    width: 100%;
+    height: 10%;
+    text-align: center;
+    background-color: #BDBDBD;
+}
+
+.footer {
+    background-color: #BDBDBD;
+    text-align: center;
+}
+
+.mainContent {
+    height: 85%;
+    background-color: #E6E6E6;
+    width: 100%;
+}

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+	<title></title>
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.12/angular.min.js"></script>
+	<script data-require="angular-ui-bootstrap@0.3.0" data-semver="0.3.0" src="http://angular-ui.github.io/bootstrap/ui-bootstrap-tpls-0.3.0.min.js"></script>
+	<!-- Latest compiled and minified CSS -->
+    <!-- Optional theme -->
+	<link href="style/styles.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css"> 
+</head>
+<body>
+    <table style="font-family: Arial">
+        <tr>
+            <td colspan="2" class="header">
+                <h1>
+                    Мой чат
+                </h1>
+            </td>
+        </tr>
+        <tr>
+			<td class="mainContent">
+				 <div class="container" ng-controller="AppCtrl">
+				   <table class="table">
+					<thead>
+					 <tr>
+					  <th>Имя пользователя</th>
+					 </tr>
+					</thead>
+					<tbody>
+					 <tr>
+					  <td><input placeholder="Введите имя пользователя" class="form-control name" ng-model="contact.name"></td>
+					 </tr>
+					<thead>
+					 <tr>
+					  <th>Сообщение</th>
+					  <th>Действие</th>
+					  <th>&nbsp;</th>
+					 </tr>
+					</thead>
+					<tr>
+					  <td><textarea placeholder="Введите сообщение" class="form-control mesage" ng-model="contact.mesage"></textarea></td>
+					  <td><button class="btn btn-primary" ng-click="addContact()">Добавить</button></td>
+					 </tr>
+					  <thead>
+					   <tr>
+						<th>Сообщение</th>
+					   </tr>
+					  </thead>
+					   <tr  ng-repeat="contact in chat">
+						<td>{{contact.registr+':'+contact.name+':  '+contact.mesage}}</td>
+						<td><button class="btn btn-danger" ng-click="remove(contact._id)">Удалить</button></td>
+					   </tr>
+					</tbody>
+					</table>
+				 </div>
+			</td>
+        </tr>
+        <tr>
+            <td colspan="2" class="footer">
+                <b>Сделал Иляш Михаил</b>
+            </td>
+        </tr>
+    </table>
+  <script src="controllers/controller.js"></script>
+  <script src="scripts/myQuery.js"></script>
+</body>
+</html>
